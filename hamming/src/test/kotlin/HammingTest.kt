@@ -15,13 +15,11 @@ class HammingTest {
         assertEquals(0, Hamming.compute("", ""))
     }
 
-    @Ignore
     @Test
     fun noDistanceBetweenShortIdenticalStrands() {
         assertEquals(0, Hamming.compute("A", "A"))
     }
 
-    @Ignore
     @Test
     fun noDistanceBetweenLongIdenticalStrands() {
         assertEquals(0, Hamming.compute("GGACTGA", "GGACTGA"))
