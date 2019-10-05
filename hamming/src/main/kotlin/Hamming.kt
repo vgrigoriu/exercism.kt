@@ -1,5 +1,3 @@
-import java.lang.IllegalArgumentException
-
 object Hamming {
     fun compute(s1: String, s2: String): Int {
         require (s1.length == s2.length) {
