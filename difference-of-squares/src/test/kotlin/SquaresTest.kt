@@ -34,7 +34,6 @@ class SquaresTest {
         assertEquals(338350, Squares(100).sumOfSquares())
     }
 
-    @Ignore
     @Test
     fun differenceOfSquares1() {
         assertEquals(0, Squares(1).difference())
