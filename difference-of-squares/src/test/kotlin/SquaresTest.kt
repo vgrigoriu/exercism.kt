@@ -39,13 +39,11 @@ class SquaresTest {
         assertEquals(0, Squares(1).difference())
     }
 
-    @Ignore
     @Test
     fun differenceOfSquares5() {
         assertEquals(170, Squares(5).difference())
     }
 
-    @Ignore
     @Test
     fun differenceOfSquares100() {
         assertEquals(25164150, Squares(100).difference())
