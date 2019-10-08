@@ -1,4 +1,4 @@
-class Squares(n: Int) {
+class Squares(private val n: Int) {
     private val sum = (n + 1) * n / 2
 
     fun squareOfSum(): Int {
@@ -6,7 +6,7 @@ class Squares(n: Int) {
     }
 
     fun sumOfSquares(): Int {
-        return 1
+        return n * (n+1) * (2*n + 1) / 6
     }
 
     fun difference(): Int {
