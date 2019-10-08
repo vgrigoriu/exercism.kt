@@ -1,6 +1,6 @@
-class Squares(n: Int) {
+class Squares(private val n: Int) {
     fun squareOfSum(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return n
     }
 
     fun sumOfSquares(): Int {
