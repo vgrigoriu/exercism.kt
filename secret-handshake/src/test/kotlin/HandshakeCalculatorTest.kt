@@ -25,7 +25,6 @@ class HandshakeCalculatorTest {
             HandshakeCalculator.calculateHandshake(4))
     }
 
-    @Ignore
     @Test
     fun testThatInput8YieldsAJump() {
         assertEquals(

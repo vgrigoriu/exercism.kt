@@ -8,6 +8,7 @@ object HandshakeCalculator {
     private val mutations = listOf(
             Pair(1, { l: List<Signal> -> l.plus(Signal.WINK) }),
             Pair(2, { l: List<Signal> -> l.plus(Signal.DOUBLE_BLINK) }),
-            Pair(4, { l: List<Signal> -> l.plus(Signal.CLOSE_YOUR_EYES) })
+            Pair(4, { l: List<Signal> -> l.plus(Signal.CLOSE_YOUR_EYES) }),
+            Pair(8, { l: List<Signal> -> l.plus(Signal.JUMP) })
     )
 }
