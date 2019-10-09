@@ -18,7 +18,6 @@ class HandshakeCalculatorTest {
             HandshakeCalculator.calculateHandshake(2))
     }
 
-    @Ignore
     @Test
     fun testThatInput4YieldsACloseYourEyes() {
         assertEquals(
