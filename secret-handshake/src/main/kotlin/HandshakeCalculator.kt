@@ -1,8 +1,8 @@
 object HandshakeCalculator {
     fun calculateHandshake(n: Int): List<Signal> {
         return mutations
-                .filter { (bit, _) -> bit and n != 0}
-                .fold(listOf(), {acc, (_, op) -> op(acc)})
+                .filter { (bit, _) -> bit and n != 0 }
+                .fold(listOf(), { acc, (_, op) -> op(acc) })
     }
 
     private val mutations = listOf(
