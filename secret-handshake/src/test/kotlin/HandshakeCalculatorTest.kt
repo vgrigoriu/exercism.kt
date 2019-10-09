@@ -11,7 +11,6 @@ class HandshakeCalculatorTest {
             HandshakeCalculator.calculateHandshake(1))
     }
 
-    @Ignore
     @Test
     fun testThatInput2YieldsADoubleBlink() {
         assertEquals(
