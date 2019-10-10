@@ -5,7 +5,7 @@ class Triangle(a: Double, b: Double, c: Double) {
         require(a + b > c && b + c > a && c + a > b)
     }
 
-    val isScalene: Boolean = true
-    val isIsosceles: Boolean = a == b || b == c || c == a
     val isEquilateral: Boolean = a == b && b == c
+    val isIsosceles: Boolean = a == b || b == c || c == a
+    val isScalene: Boolean = !isIsosceles
 }
