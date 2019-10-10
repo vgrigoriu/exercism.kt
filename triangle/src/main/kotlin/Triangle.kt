@@ -2,7 +2,7 @@ class Triangle(a: Double, b: Double, c: Double) {
     constructor(a: Int, b: Int, c: Int): this(a.toDouble(), b.toDouble(), c.toDouble())
 
     init {
-        require(a != 0.0 && b != 0.0 && c != 0.0)
+        require(a + b > c && b + c > a && c + a > b)
     }
 
     val isScalene: Boolean = true
