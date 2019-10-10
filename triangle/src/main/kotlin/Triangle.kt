@@ -6,6 +6,6 @@ class Triangle(a: Double, b: Double, c: Double) {
     }
 
     val isScalene: Boolean = true
-    val isIsosceles: Boolean = true
+    val isIsosceles: Boolean = a == b || b == c || c == a
     val isEquilateral: Boolean = a == b && b == c
 }
