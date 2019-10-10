@@ -3,5 +3,5 @@ class Triangle(a: Double, b: Double, c: Double) {
 
     val isScalene: Boolean = true
     val isIsosceles: Boolean = true
-    val isEquilateral: Boolean = true
+    val isEquilateral: Boolean = a == b && b == c
 }
