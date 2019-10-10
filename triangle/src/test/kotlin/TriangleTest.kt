@@ -15,7 +15,6 @@ class TriangleTest {
         assertFalse(Triangle(2, 3, 2).isEquilateral)
     }
 
-    @Ignore
     @Test
     fun notEquilateralIfNoSidesAreEqual() {
         assertFalse(Triangle(5, 4, 6).isEquilateral)
@@ -27,7 +26,6 @@ class TriangleTest {
         assertFalse(Triangle(0, 0, 0).isEquilateral)
     }
 
-    @Ignore
     @Test
     fun equilateralSidesMayBeFloatingPoint() {
         assertTrue(Triangle(0.5, 0.5, 0.5).isEquilateral)
