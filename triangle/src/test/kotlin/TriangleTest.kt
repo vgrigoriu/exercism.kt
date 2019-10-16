@@ -46,6 +46,11 @@ class TriangleTest {
     }
 
     @Test
+    fun degenerateIsosceles() {
+        assertTrue(Triangle(1, 2, 1).isIsosceles)
+    }
+
+    @Test
     fun equilateralIsAlsoIsosceles() {
         assertTrue(Triangle(4, 4, 4).isIsosceles)
     }
