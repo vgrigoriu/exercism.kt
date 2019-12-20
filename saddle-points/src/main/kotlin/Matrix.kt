@@ -11,7 +11,7 @@ class Matrix(private val numbers: List<List<Int>>) {
 
         val candidatesFromRows = numbers.indices
                 .flatMap { row -> indicesOfMaxes(row).map { MatrixCoordinate(row, it) } }
-        val candidatesFromColumns = (0 until numbers[0].size)
+        val candidatesFromColumns = numbers[0].indices
                 .flatMap { col -> indicesOfMins(col).map { MatrixCoordinate(it, col) } }
 
         return candidatesFromRows.intersect(candidatesFromColumns)
@@ -19,31 +19,23 @@ class Matrix(private val numbers: List<List<Int>>) {
 
     private fun indicesOfMaxes(rowNo: Int): Set<Int> {
         require(numbers[rowNo].isNotEmpty())
-        var indices = listOf(0)
-        var max = numbers[rowNo][0]
-        for (i in 1 until numbers[rowNo].size) {
-            if (numbers[rowNo][i] > max) {
-                max = numbers[rowNo][i]
-                indices = listOf(i)
-            } else if (numbers[rowNo][i] == max) {
-                indices = indices + i
-            }
-        }
-        return indices.toSet()
+
+        val values = numbers[rowNo]
+        val max = values.max()
+        return values.withIndex()
+                .filter { it.value == max }
+                .map { it.index }
+                .toSet()
     }
 
     private fun indicesOfMins(colNo: Int): Set<Int> {
         require(colNo < numbers.size)
-        var indices = listOf(0)
-        var min = numbers[0][colNo]
-        for (i in 1 until numbers.size) {
-            if (numbers[i][colNo] < min) {
-                min = numbers[i][colNo]
-                indices = listOf(i)
-            } else if (numbers[i][colNo] == min) {
-                indices = indices + i
-            }
-        }
-        return indices.toSet()
+
+        val values = numbers.indices.map { numbers[it][colNo] }
+        val min = values.min()
+        return values.withIndex()
+                .filter { it.value == min }
+                .map { it.index }
+                .toSet()
     }
 }
