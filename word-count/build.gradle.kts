@@ -9,8 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-    implementation(kotlin("script-runtime"))
+    compile(kotlin("stdlib"))
     
     testImplementation("junit:junit:4.12")
     testImplementation(kotlin("test-junit"))
