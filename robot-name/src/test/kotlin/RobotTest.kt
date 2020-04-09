@@ -24,7 +24,6 @@ class RobotTest {
         assertNotEquals(robot.name, Robot().name)
     }
     
-    @Ignore
     @Test
     fun robotRemembersItsName() {
         assertEquals(robot.name, robot.name)
