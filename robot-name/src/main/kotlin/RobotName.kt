@@ -6,7 +6,7 @@ class Robot {
         get() = _name
 
     fun reset() {
-        TODO("Implement this function to complete the task")
+        _name = getNextRobotName()
     }
 
     companion object {

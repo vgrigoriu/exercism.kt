@@ -29,7 +29,6 @@ class RobotTest {
         assertEquals(robot.name, robot.name)
     }
 
-    @Ignore
     @Test
     fun resetName() {
         val name = robot.name
