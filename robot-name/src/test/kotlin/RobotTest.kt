@@ -39,7 +39,6 @@ class RobotTest {
         assertTrue(isValidName(name2), "Robot name $name2 didn't match expected pattern.")
     }
 
-    @Ignore
     @Test
     fun isRandom() {
         val iterations = 100000
